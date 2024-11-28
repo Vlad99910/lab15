@@ -31,15 +31,12 @@ void main() {
   // Тест для перевірки кроку лічильника
   testWidgets('Counter increments by 1', (WidgetTester tester) async {
     await tester.pumpWidget(MyApp());
-
-    // Перевірка початкового значення
+    
     expect(find.text('0'), findsOneWidget);
-
-    // Клік по кнопці
+    
     await tester.tap(find.byType(FloatingActionButton));
     await tester.pump();
 
-    // Перевірка значення після натискання
     expect(find.text('1'), findsOneWidget);
   });
 }
